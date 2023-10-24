@@ -25,6 +25,7 @@ namespace KitchenCandy.GDOs.Cotton
         public override ShoppingTags ShoppingTags => ShoppingTags.Cooking;
 
         public override List<Appliance.ApplianceProcesses> Processes => new() { new() { Process = GetCastedGDO<Process, CottonCandyProcess>() } };
+        public override List<Appliance> Upgrades => new() { GetCastedGDO<Appliance, AutoFlosser>() };
 
         public override List<IApplianceProperty> Properties => new()
         {
