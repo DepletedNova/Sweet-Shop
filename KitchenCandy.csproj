@@ -109,6 +109,7 @@
     <Compile Include="Components.cs" />
     <Compile Include="GDOs\Box\ClosedCandyBox.cs" />
     <Compile Include="GDOs\Box\CandyBoxSource.cs" />
+    <Compile Include="GDOs\Box\CandyRubbish.cs" />
     <Compile Include="GDOs\Box\EmptyCandyBox.cs" />
     <Compile Include="GDOs\Box\CandyBox.cs" />
     <Compile Include="GDOs\Box\FilledCandyBox.cs" />

@@ -12,7 +12,7 @@ namespace KitchenCandy.GDOs.Box
     {
         public override string UniqueNameID => "Empty Candy Box";
         public override Appliance DedicatedProvider => GetCastedGDO<Appliance, CandyBoxSource>();
-        public override ItemStorage ItemStorageFlags => ItemStorage.Small;
+        public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
 
         public override List<Item.ItemProcess> Processes => new()

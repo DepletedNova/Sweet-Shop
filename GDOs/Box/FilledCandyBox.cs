@@ -13,7 +13,7 @@ namespace KitchenCandy.GDOs.Box
     public class FilledCandyBox : CustomItemGroup<ItemGroupView>
     {
         public override string UniqueNameID => "Open Filled Candy Box";
-        public override ItemStorage ItemStorageFlags => ItemStorage.Small;
+        public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
 
         public override List<ItemGroup.ItemSet> Sets => new()

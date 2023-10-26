@@ -17,7 +17,7 @@ namespace KitchenCandy.GDOs.Box
         public override GameObject Prefab => GetPrefab("Candy Box");
         public override bool ApplyProcessesToComponents => true;
 
-        public override Item DirtiesTo => GetCastedGDO<Item, EmptyCandyBox>();
+        public override Item DirtiesTo => GetCastedGDO<Item, CandyRubbish>();
         public override ItemValue ItemValue => ItemValue.Small;
         public override void OnRegister(ItemGroup GDO)
         {
