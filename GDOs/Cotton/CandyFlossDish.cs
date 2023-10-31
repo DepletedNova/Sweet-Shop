@@ -65,7 +65,7 @@ namespace KitchenCandy.GDOs.Cotton
 
         public override void OnRegister(Dish gdo)
         {
-            gdo.Difficulty = 2;
+            gdo.Difficulty = 3;
         }
     }
 }

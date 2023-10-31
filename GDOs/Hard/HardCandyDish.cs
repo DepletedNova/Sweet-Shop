@@ -33,7 +33,7 @@ namespace KitchenCandy.GDOs.Hard
             "Simmering Sweets"
         };
 
-        public override DishCustomerChange CustomerMultiplier => DishCustomerChange.LargeIncrease;
+        public override DishCustomerChange CustomerMultiplier => DishCustomerChange.SmallIncrease;
         public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Medium;
 
         public override List<Dish.MenuItem> ResultingMenuItems => new()

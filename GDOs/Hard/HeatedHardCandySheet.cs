@@ -37,7 +37,7 @@ namespace KitchenCandy.GDOs.Hard
         {
             Process = GetGDO<Process>(ProcessReferences.SteepTea),
             Result = GetCastedGDO<Item, HardCandySheet>(),
-            Duration = 7.5f
+            Duration = 6.5f
         };
 
         public override GameObject Prefab => GetPrefab("Heated Hard Candy Sheet");

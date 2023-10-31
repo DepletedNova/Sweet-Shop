@@ -21,7 +21,7 @@ namespace KitchenCandy.GDOs.Hard
             {
                 Process = GetGDO<Process>(ProcessReferences.Chop),
                 Result = GetCastedGDO<Item, CrackedHardCandySheet>(),
-                Duration = 2f
+                Duration = 1f
             }
         };
 

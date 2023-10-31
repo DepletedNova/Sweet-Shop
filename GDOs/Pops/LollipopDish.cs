@@ -64,7 +64,7 @@ namespace KitchenCandy.GDOs.Pops
 
         public override void OnRegister(Dish gdo)
         {
-            gdo.Difficulty = 2;
+            gdo.Difficulty = 3;
 
 
         }

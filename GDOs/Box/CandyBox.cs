@@ -1,7 +1,6 @@
 ﻿using Kitchen;
 using KitchenCandy.GDOs.Hard;
 using KitchenCandy.GDOs.Pops;
-using KitchenCandy.GDOs.Stick;
 using KitchenData;
 using KitchenLib.Customs;
 using System.Collections.Generic;
@@ -19,10 +18,6 @@ namespace KitchenCandy.GDOs.Box
 
         public override Item DirtiesTo => GetCastedGDO<Item, CandyRubbish>();
         public override ItemValue ItemValue => ItemValue.Small;
-        public override void OnRegister(ItemGroup GDO)
-        {
-            GDO.EatingTime = 2f;
-        }
 
         public override List<ItemGroup.ItemSet> Sets => new()
         {

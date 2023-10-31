@@ -12,7 +12,7 @@ namespace KitchenCandy.GDOs.Box
         public override string UniqueNameID => "Candy Box Source";
         public override List<(Locale, ApplianceInfo)> InfoList => new()
         {
-            (Locale.English, CreateApplianceInfo("Candy Boxes", "Provides boxes for candy", new List<Appliance.Section>(), new()))
+            (Locale.English, CreateApplianceInfo("Candy Wrappings", "Provides wrappings for candy", new List<Appliance.Section>(), new()))
         };
         public override bool SellOnlyAsDuplicate => true;
         public override bool IsPurchasable => true;

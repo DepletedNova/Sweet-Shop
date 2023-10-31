@@ -10,7 +10,7 @@ namespace KitchenCandy.View
 {
     public class CottonCandyView : UpdatableObjectView<CottonCandyView.ViewData>
     {
-        public float MaxAcceleration = 200f;
+        public float MaxAcceleration = 400f;
 
         // Renderer
         public MeshRenderer IndicatorRenderer;
@@ -62,9 +62,9 @@ namespace KitchenCandy.View
         private void Update()
         {
             if (Data.Active && CurrentAcceleration != MaxAcceleration)
-                CurrentAcceleration = Mathf.Min(CurrentAcceleration + 50f * Time.deltaTime, MaxAcceleration);
+                CurrentAcceleration = Mathf.Min(CurrentAcceleration + 100f * Time.deltaTime, MaxAcceleration);
             else if (!Data.Active && CurrentAcceleration > 0f)
-                CurrentAcceleration = Mathf.Max(CurrentAcceleration - 100f * Time.deltaTime, 0f);
+                CurrentAcceleration = Mathf.Max(CurrentAcceleration - 200f * Time.deltaTime, 0f);
 
             if (CurrentAcceleration > 0f)
                 Spinner.Rotate(new Vector3(0, CurrentAcceleration * Time.deltaTime, 0));
