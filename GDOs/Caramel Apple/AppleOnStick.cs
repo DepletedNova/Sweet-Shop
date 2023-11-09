@@ -13,7 +13,7 @@ namespace KitchenCandy.GDOs.Caramel_Apple
     public class AppleOnStick : CustomItemGroup
     {
         public override string UniqueNameID => "Apple On Stick";
-        public override ItemStorage ItemStorageFlags => ItemStorage.Small;
+        public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override List<ItemGroup.ItemSet> Sets => new()
         {

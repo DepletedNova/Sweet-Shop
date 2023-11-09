@@ -13,7 +13,7 @@ namespace KitchenCandy.GDOs.Caramel_Apple
     public class CaramelApple : CustomItemGroup<ItemGroupView>
     {
         public override string UniqueNameID => "Caramel Apple";
-        public override ItemStorage ItemStorageFlags => ItemStorage.Small;
+        public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemValue ItemValue => ItemValue.SideMedium;
         public override Item DirtiesTo => GetCastedGDO<Item, RubbishCandyStick>();
