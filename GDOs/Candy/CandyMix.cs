@@ -40,7 +40,7 @@ namespace KitchenCandy.GDOs.Candy
             new()
             {
                 Process = GetGDO<Process>(ProcessReferences.Cook),
-                Duration = 4.5f,
+                Duration = 5f,
                 Result = GetCastedGDO<Item, HeatedCandyMix>()
             }
         };

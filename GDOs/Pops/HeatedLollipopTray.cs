@@ -51,7 +51,7 @@ namespace KitchenCandy.GDOs.Pops
         {
             Process = GetGDO<Process>(ProcessReferences.SteepTea),
             Result = GetCastedGDO<Item, FilledLollipopTray>(),
-            Duration = 10f
+            Duration = 8f
         };
 
         public override GameObject Prefab => GetPrefab("Heated Lollipop Tray");

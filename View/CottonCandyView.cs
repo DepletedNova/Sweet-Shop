@@ -23,7 +23,7 @@ namespace KitchenCandy.View
         public GameObject Stick;
         public GameObject HoldPoint;
 
-        private ViewData Data = new();
+        private ViewData Data = default;
         private float CurrentAcceleration = 0f;
 
         protected override void UpdateData(ViewData data)

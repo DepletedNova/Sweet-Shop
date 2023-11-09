@@ -1,5 +1,4 @@
-﻿using KitchenCandy.GDOs.Candy;
-using KitchenData;
+﻿using KitchenData;
 using KitchenLib.Customs;
 using KitchenLib.References;
 using KitchenLib.Utils;

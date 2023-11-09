@@ -17,6 +17,7 @@ namespace KitchenCandy.GDOs.Pops
         public override ItemCategory ItemCategory => ItemCategory.Generic;
 
         public override int SplitCount => 2;
+        public override float SplitSpeed => 1.75f;
         public override Item SplitSubItem => GetCastedGDO<Item, Lollipop>();
         public override List<Item> SplitDepletedItems => new() { DisposesTo };
 

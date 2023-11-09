@@ -1,5 +1,6 @@
 ﻿using Kitchen;
 using KitchenCandy.GDOs.Hard;
+using KitchenCandy.GDOs.Peppermint;
 using KitchenCandy.GDOs.Pops;
 using KitchenData;
 using KitchenLib.Customs;
@@ -33,7 +34,8 @@ namespace KitchenCandy.GDOs.Box
                 Items = new()
                 {
                     GetCastedGDO<Item, HardCandy>(),
-                    GetCastedGDO<Item, Lollipop>()
+                    GetCastedGDO<Item, Lollipop>(),
+                    GetCastedGDO<Item, PeppermintChocolate>(),
                 },
                 Min = 1, Max = 1,
             }
@@ -83,16 +85,32 @@ namespace KitchenCandy.GDOs.Box
             });
             #endregion
 
+            #region Peppermint Chocolate
+            var PC = prefab.GetChild("Peppermint Chocolate");
+            PC.ApplyMaterialToChild("Unwrapped", "Candy - Pink");
+            PC.ApplyMaterialToChild("Wrapped", "Candy - Pink");
+            PC.ApplyMaterialToChild("Chocolate", "Chocolate - Darker");
+            PC.ApplyMaterialToChild("Peppermint", "Plastic - Red", "Plastic - White");
+
+            compGroups.Add(new()
+            {
+                Item = GetCastedGDO<Item, PeppermintChocolate>(),
+                GameObject = PC
+            });
+            #endregion
+
             List<GameObject> openLids = new()
             {
                 HC.GetChild("Unwrapped"),
-                LP.GetChild("Unwrapped")
+                LP.GetChild("Unwrapped"),
+                PC.GetChild("Unwrapped"),
             };
 
             List<GameObject> closedLids = new()
             {
                 HC.GetChild("Wrapped"),
-                LP.GetChild("Wrapped")
+                LP.GetChild("Wrapped"),
+                PC.GetChild("Wrapped"),
             };
 
             #region Finishing touches

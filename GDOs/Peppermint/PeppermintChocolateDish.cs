@@ -1,21 +1,20 @@
 ﻿using IngredientLib.Ingredient.Items;
 using KitchenCandy.GDOs.Box;
+using KitchenCandy.GDOs.Cane;
 using KitchenCandy.GDOs.Hard;
-using KitchenCandy.GDOs.Pop;
-using KitchenCandy.GDOs.Stick;
 using KitchenData;
 using KitchenLib.Customs;
 using KitchenLib.References;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace KitchenCandy.GDOs.Pops
+namespace KitchenCandy.GDOs.Peppermint
 {
-    public class LollipopDish : CustomDish
+    public class PeppermintChocolateDish : CustomDish
     {
-        public override string UniqueNameID => "Lollipop Dish";
-        public override GameObject DisplayPrefab => GetPrefab("Lollipop");
-        public override GameObject IconPrefab => GetPrefab("Lollipop");
+        public override string UniqueNameID => "Peppermint Chocolate Dish";
+        public override GameObject DisplayPrefab => GetPrefab("Peppermint Chocolate");
+        public override GameObject IconPrefab => GetPrefab("Peppermint Chocolate");
         public override UnlockGroup UnlockGroup => UnlockGroup.Dish;
         public override CardType CardType => CardType.Default;
         public override bool IsUnlockable => true;
@@ -35,33 +34,34 @@ namespace KitchenCandy.GDOs.Pops
             new()
             {
                 MenuItem = GetCastedGDO<ItemGroup, CandyBox>(),
-                Ingredient = GetCastedGDO<Item, Lollipop>()
+                Ingredient = GetCastedGDO<Item, PeppermintChocolate>()
             }
         };
 
         public override HashSet<Process> RequiredProcesses => new()
         {
-            GetGDO<Process>(ProcessReferences.Cook)
+            GetGDO<Process>(ProcessReferences.Cook),
+            GetGDO<Process>(ProcessReferences.Chop)
         };
         public override HashSet<Item> MinimumIngredients => new()
         {
-            GetCastedGDO<Item, LollipopTray>(),
-            GetCastedGDO<Item, CandyStick>(),
+            GetCastedGDO<Item, CoolingChocolateTray>(),
             GetCastedGDO<Item, EmptyCandyBox>(),
-            GetCastedGDO<Item, Syrup>(),
-            GetGDO<Item>(ItemReferences.Water),
-            GetGDO<Item>(ItemReferences.Sugar),
+            GetCastedGDO<Item, WhippingCream>(),
+            GetCastedGDO<Item, CandyCane>(),
+            GetGDO<Item>(ItemReferences.Chocolate),
         };
 
         public override Dictionary<Locale, string> Recipe => new()
         {
-            { Locale.English, "Place sticks into tray, and create Candy and place in tray. Let tray cool and then smash the candy into chunks. Portion lollipops into wrapping then close wrapping and serve." }
+            { Locale.English, "Melt chocolate, add heavy cream, and add to try. Melt chocolate and add to tray. Chop up candy canes and add to tray after sufficiently cooled. " +
+                "Portion, add and close wrapper and serve." }
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            (Locale.English, CreateUnlockInfo("Lollipops", "Adds lollipops as a main", "Pops!"))
+            (Locale.English, CreateUnlockInfo("Peppermint Chocolate", "Adds peppermint chocolate as a main", "Like 3 Muskateers!"))
         };
 
-        public override int Difficulty => 3;
+        public override int Difficulty => 2;
     }
 }

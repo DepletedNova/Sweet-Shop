@@ -22,7 +22,7 @@ namespace KitchenCandy.GDOs.Candy
             {
                 Process = GetGDO<Process>(ProcessReferences.Cook),
                 Result = GetGDO<Item>(ItemReferences.BurnedFood),
-                Duration = 2.5f,
+                Duration = 2f,
                 IsBad = true
             }
         };
@@ -31,7 +31,7 @@ namespace KitchenCandy.GDOs.Candy
         {
             Process = GetGDO<Process>(ProcessReferences.SteepTea),
             Result = GetCastedGDO<Item, CooledCandyMix>(),
-            Duration = 20f,
+            Duration = 10f,
             IsBad = true
         };
 

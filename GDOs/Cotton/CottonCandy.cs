@@ -13,7 +13,8 @@ namespace KitchenCandy.GDOs.Cotton
         public override ItemStorage ItemStorageFlags => ItemStorage.StackableFood;
         public override ItemCategory ItemCategory => ItemCategory.Generic;
         public override ItemValue ItemValue => ItemValue.Medium;
-        public override Item DirtiesTo => GetCastedGDO<Item, CandyRubbish>();
+        public override Item DirtiesTo => GetCastedGDO<Item, RubbishCandyStick>();
+        public override Factor EatingTime => 1.5f;
 
         public override GameObject Prefab => GetPrefab("Cotton Candy");
         public override void OnRegister(Item GDO)

@@ -16,7 +16,7 @@ namespace KitchenCandy.GDOs.Hard
         public override ItemCategory ItemCategory => ItemCategory.Generic;
 
         public override int SplitCount => 4;
-        public override float SplitSpeed => 2f;
+        public override float SplitSpeed => 1.75f;
         public override Item SplitSubItem => GetCastedGDO<Item, HardCandy>();
         public override List<Item> SplitDepletedItems => new() { DisposesTo };
 

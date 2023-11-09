@@ -63,9 +63,6 @@ namespace KitchenCandy.GDOs.Cotton
             (Locale.English, CreateUnlockInfo("Candy Floss", "Adds candy floss as a main", "Fluffy!"))
         };
 
-        public override void OnRegister(Dish gdo)
-        {
-            gdo.Difficulty = 3;
-        }
+        public override int Difficulty => 4;
     }
 }

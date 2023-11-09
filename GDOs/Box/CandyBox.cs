@@ -1,5 +1,6 @@
 ﻿using Kitchen;
 using KitchenCandy.GDOs.Hard;
+using KitchenCandy.GDOs.Peppermint;
 using KitchenCandy.GDOs.Pops;
 using KitchenData;
 using KitchenLib.Customs;
@@ -18,6 +19,7 @@ namespace KitchenCandy.GDOs.Box
 
         public override Item DirtiesTo => GetCastedGDO<Item, CandyRubbish>();
         public override ItemValue ItemValue => ItemValue.Small;
+        public override Factor EatingTime => 1.5f;
 
         public override List<ItemGroup.ItemSet> Sets => new()
         {
@@ -34,7 +36,8 @@ namespace KitchenCandy.GDOs.Box
                 Items = new()
                 {
                     GetCastedGDO<Item, HardCandy>(),
-                    GetCastedGDO<Item, Lollipop>()
+                    GetCastedGDO<Item, Lollipop>(),
+                    GetCastedGDO<Item, PeppermintChocolate>()
                 },
                 Min = 1, Max = 1, OrderingOnly = true,
                 RequiresUnlock = true,

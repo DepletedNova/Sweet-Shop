@@ -2,6 +2,7 @@
 using Kitchen;
 using KitchenCandy.GDOs.Box;
 using KitchenCandy.GDOs.Candy;
+using KitchenCandy.Systems;
 using KitchenData;
 using KitchenLib.Customs;
 using KitchenLib.References;
@@ -33,7 +34,7 @@ namespace KitchenCandy.GDOs.Hard
             "Simmering Sweets"
         };
 
-        public override DishCustomerChange CustomerMultiplier => DishCustomerChange.SmallIncrease;
+        public override DishCustomerChange CustomerMultiplier => DishCustomerChange.SmallDecrease;
         public override Unlock.RewardLevel ExpReward => Unlock.RewardLevel.Medium;
 
         public override List<Dish.MenuItem> ResultingMenuItems => new()
@@ -77,11 +78,14 @@ namespace KitchenCandy.GDOs.Hard
             (Locale.English, CreateUnlockInfo("Sweeties", "Adds Sweeties as a main", "Candy :3"))
         };
 
+        public override int Difficulty => 3;
+        public override List<Dish> AlsoAddRecipes => new()
+        {
+            GetCastedGDO<Dish, CandyRecipe>()
+        };
+
         public override void OnRegister(Dish gdo)
         {
-            gdo.Difficulty = 2;
-            gdo.AlsoAddRecipes = new() { GetCastedGDO<Dish, CandyRecipe>() };
-
             var wrapping = IconPrefab.GetChild("Wrapped");
             wrapping.ApplyMaterialToChildren("Pink", "Candy - Pink");
             wrapping.ApplyMaterialToChildren("Blue", "Candy - Blue");
@@ -91,6 +95,8 @@ namespace KitchenCandy.GDOs.Hard
 
             IconPrefab.ApplyMaterialToChild("Cotton Candy/Stick", "Plastic");
             IconPrefab.ApplyMaterialToChild("Cotton Candy/Candy", "Candy - Cotton");
+
+            SweetiesReplaceBin.SweetiesID = gdo.ID;
         }
     }
 }
