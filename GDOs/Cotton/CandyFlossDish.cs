@@ -19,7 +19,7 @@ namespace KitchenCandy.GDOs.Cotton
         public override UnlockGroup UnlockGroup => UnlockGroup.Dish;
         public override CardType CardType => CardType.Default;
         public override bool IsUnlockable => true;
-        public override DishType Type => DishType.Main;
+        public override DishType Type => DishType.Extra;
         public override bool RequiredNoDishItem => true;
 
         public override DishCustomerChange CustomerMultiplier => DishCustomerChange.SmallDecrease;
