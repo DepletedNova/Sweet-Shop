@@ -30,7 +30,7 @@ namespace KitchenCandy.GDOs.Cotton
             new()
             {
                 Item = GetCastedGDO<Item, CottonCandy>(),
-                Phase = MenuPhase.Main,
+                Phase = MenuPhase.Dessert,
                 Weight = 1f
             }
         };

@@ -54,12 +54,12 @@ namespace KitchenCandy.GDOs.Peppermint
 
         public override Dictionary<Locale, string> Recipe => new()
         {
-            { Locale.English, "Melt chocolate, add heavy cream, and add to try. Melt chocolate and add to tray. Chop up candy canes and add to tray after sufficiently cooled. " +
+            { Locale.English, "Melt chocolate, add heavy cream, and add to tray. Melt chocolate and add to tray. Chop up candy canes and add to tray after sufficiently cooled. " +
                 "Portion, add and close wrapper and serve." }
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            (Locale.English, CreateUnlockInfo("Peppermint Chocolate", "Adds peppermint chocolate as a main", "Like 3 Muskateers!"))
+            (Locale.English, CreateUnlockInfo("Peppermint Chocolate", "Adds peppermint chocolate as a main", "Like 3 Musketeers!"))
         };
 
         public override int Difficulty => 2;

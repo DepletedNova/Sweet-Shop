@@ -42,7 +42,7 @@ namespace KitchenCandy.GDOs.Hard
             new()
             {
                 Item = GetCastedGDO<ItemGroup, CandyBox>(),
-                Phase = MenuPhase.Main,
+                Phase = MenuPhase.Dessert,
                 Weight = 1f
             }
         };

@@ -33,7 +33,7 @@ namespace KitchenCandy.GDOs.Caramel_Apple
             {
                 Item = GetCastedGDO<Item, CaramelApple>(),
                 Weight = 1,
-                Phase = MenuPhase.Main
+                Phase = MenuPhase.Dessert
             }
         };
 
