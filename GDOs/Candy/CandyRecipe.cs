@@ -18,7 +18,7 @@ namespace KitchenCandy.GDOs.Candy
 
         public override Dictionary<Locale, string> Recipe => new()
         {
-            { Locale.English, "Add sugar, water, and syrup together and cook. Take off heat and use properly. The heated candy mix must be used quickly otherwise it'll cool and become unusable." }
+            { Locale.English, "Add sugar, water, and syrup together and cook. Take off heat and use in other recipes. The heated candy mix must be used quickly otherwise it'll cool and become unusable." }
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {

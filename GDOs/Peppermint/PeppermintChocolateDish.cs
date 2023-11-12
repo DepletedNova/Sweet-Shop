@@ -49,17 +49,17 @@ namespace KitchenCandy.GDOs.Peppermint
             GetCastedGDO<Item, EmptyCandyBox>(),
             GetCastedGDO<Item, WhippingCream>(),
             GetCastedGDO<Item, CandyCane>(),
-            GetGDO<Item>(ItemReferences.Chocolate),
+            GetCastedGDO<Item, Chocolate>(),
         };
 
         public override Dictionary<Locale, string> Recipe => new()
         {
-            { Locale.English, "Melt chocolate, add heavy cream, and add to tray. Melt chocolate and add to tray. Chop up candy canes and add to tray after sufficiently cooled. " +
+            { Locale.English, "Melt chocolate, add heavy cream, and add to sweeties tray. Melt chocolate again and add to sweeties tray. Chop up candy canes and add to tray after it has sufficiently cooled. " +
                 "Portion, add and close wrapper and serve." }
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            (Locale.English, CreateUnlockInfo("Peppermint Chocolate", "Adds peppermint chocolate as a main", "Like 3 Musketeers!"))
+            (Locale.English, CreateUnlockInfo("Peppermint Chocolate", "Adds peppermint chocolate as a main", "With a fluffy inside!"))
         };
 
         public override int Difficulty => 2;

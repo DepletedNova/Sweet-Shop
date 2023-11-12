@@ -55,7 +55,7 @@ namespace KitchenCandy.GDOs.Pops
 
         public override Dictionary<Locale, string> Recipe => new()
         {
-            { Locale.English, "Place sticks into tray, and create Candy and place in tray. Let tray cool and then smash the candy into chunks. Portion lollipops into wrapping then close wrapping and serve." }
+            { Locale.English, "Place sticks into lollipop tray. Create Candy and place in tray. Let tray tray cool and portion lollipops into wrapping then close wrapping and serve." }
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {

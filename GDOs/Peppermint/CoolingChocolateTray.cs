@@ -24,7 +24,7 @@ namespace KitchenCandy.GDOs.Peppermint
                 Items = new()
                 {
                     GetCastedGDO<Item, HardCandyTray>(),
-                    GetCastedGDO<Item, Ganache>(),
+                    GetCastedGDO<Item, Ganache>()
                 },
                 Max = 2,
                 Min = 2,

@@ -12,12 +12,8 @@ namespace KitchenCandy.View
     {
         public float MaxAcceleration = 400f;
 
-        // Renderer
-        public MeshRenderer IndicatorRenderer;
-        public Material InactiveIndicator;
-        public Material ActiveIndicator;
+        public GameObject HardCandy;
 
-        // Spinner
         public Transform Spinner;
         public GameObject Candy;
         public GameObject Stick;
@@ -28,18 +24,15 @@ namespace KitchenCandy.View
 
         protected override void UpdateData(ViewData data)
         {
-            if (data.HasStick)
-                Stick.SetActive(true);
-            else
-                Stick.SetActive(false);
+            Stick.SetActive(data.HasStick);
 
             if (data.HasCandy && !Data.HasCandy)
             {
                 Candy.transform.localScale = new(0f, 0f, 0.35f);
-                IndicatorRenderer.material = ActiveIndicator;
+                HardCandy.SetActive(true);
             }
             else if (!data.HasCandy)
-                IndicatorRenderer.material = InactiveIndicator;
+                HardCandy.SetActive(false);
 
             if (data.HasStick && data.HasCandy)
             {
@@ -50,11 +43,7 @@ namespace KitchenCandy.View
             else
                 Candy.SetActive(false);
 
-            if (data.ShowHoldPoint)
-                HoldPoint.SetActive(true);
-            else
-                HoldPoint.SetActive(false);
-
+            HoldPoint.SetActive(data.ShowHoldPoint);
 
             Data = data;
         }

@@ -63,16 +63,13 @@ namespace KitchenCandy.GDOs.Cotton
             prefab.ApplyMaterialToChild("Machine", "Plastic - Red", "Metal", "Hob Black");
             prefab.ApplyMaterialToChild("Rail", "Metal Dark");
             prefab.ApplyMaterialToChild("Spinner/Holder", "Metal Dark");
-            var indicator = prefab.ApplyMaterialToChild("Indicator", "Indicator Light");
             var candy = prefab.ApplyMaterialToChild("Spinner/Candy", "Candy - Cotton");
             var stick = prefab.ApplyMaterialToChild("Spinner/Stick", "Plastic");
             var holdPoint = prefab.transform.Find("HoldPoint");
 
             var view = prefab.TryAddComponent<CottonCandyView>();
 
-            view.IndicatorRenderer = indicator.GetComponent<MeshRenderer>();
-            view.ActiveIndicator = MaterialUtils.GetExistingMaterial("Indicator Light On");
-            view.InactiveIndicator = MaterialUtils.GetExistingMaterial("Indicator Light");
+            view.HardCandy = prefab.ApplyMaterialToChild("Candy", "Candy - Colorful");
 
             view.Spinner = prefab.GetChild("Spinner").transform;
             view.Candy = candy;
