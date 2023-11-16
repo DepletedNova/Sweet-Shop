@@ -19,7 +19,7 @@ namespace KitchenCandy.GDOs.Cotton
         {
             (Locale.English, CreateApplianceInfo("Auto Flosser", "This can't be a real word", new List<Appliance.Section>() { new() { 
                     Title = "<sprite name=\"upgrade\" color=#A8FF1E> Automated", 
-                    Description = "Performs <sprite name=\"cotton_candy_0\"> <color=#ff1111>50%</color> slower automatically" } }, new()))
+                    Description = "Performs <sprite name=\"cotton_candy_0\"> <color=#ff1111>33%</color> slower automatically" } }, new()))
         };
         public override List<Process> RequiresProcessForShop => new() { GetCastedGDO<Process, CottonCandyProcess>() };
         public override bool IsPurchasableAsUpgrade => true;
@@ -35,7 +35,7 @@ namespace KitchenCandy.GDOs.Cotton
             new CTakesDuration
             {
                 Mode = InteractionMode.Items,
-                Total = 6f,
+                Total = 4f,
                 PreserveProgress = true,
                 IsLocked = true
             },

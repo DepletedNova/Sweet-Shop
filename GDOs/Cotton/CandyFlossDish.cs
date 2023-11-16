@@ -60,7 +60,7 @@ namespace KitchenCandy.GDOs.Cotton
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            (Locale.English, CreateUnlockInfo("Candy Floss", "Adds candy floss as a main", "Fluffy!"))
+            (Locale.English, CreateUnlockInfo("Candy Floss", "Adds candy floss as a dessert", "Fluffy!"))
         };
 
         public override int Difficulty => 4;

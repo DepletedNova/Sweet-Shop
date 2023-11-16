@@ -59,7 +59,7 @@ namespace KitchenCandy.GDOs.Peppermint
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            (Locale.English, CreateUnlockInfo("Peppermint Chocolate", "Adds peppermint chocolate as a main", "With a fluffy inside!"))
+            (Locale.English, CreateUnlockInfo("Peppermint Chocolate", "Adds peppermint chocolate as a dessert", "With a fluffy inside!"))
         };
 
         public override int Difficulty => 2;

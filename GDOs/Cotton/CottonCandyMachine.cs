@@ -35,7 +35,7 @@ namespace KitchenCandy.GDOs.Cotton
             {
                 Mode = InteractionMode.Items,
                 Manual = true,
-                Total = 4f,
+                Total = 3f,
                 PreserveProgress = true,
                 IsLocked = true
             },

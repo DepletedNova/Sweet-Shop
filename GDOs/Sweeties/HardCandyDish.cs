@@ -75,7 +75,7 @@ namespace KitchenCandy.GDOs.Hard
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            (Locale.English, CreateUnlockInfo("Sweeties", "Adds Sweeties as a main", "Candy :3"))
+            (Locale.English, CreateUnlockInfo("Sweeties", "Adds Sweeties as a dessert", "Candy :3"))
         };
 
         public override int Difficulty => 3;

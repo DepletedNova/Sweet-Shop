@@ -19,7 +19,7 @@ namespace KitchenCandy
     {
         public const string NAME = "Sweet Shop";
         public const string GUID = "nova.candyshop";
-        public const string VERSION = "1.1.4";
+        public const string VERSION = "1.1.5";
 
         public Main() : base(GUID, NAME, "Zoey Davis", VERSION, ">=1.0.0", Assembly.GetExecutingAssembly()) { }
 

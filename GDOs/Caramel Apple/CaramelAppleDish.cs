@@ -56,7 +56,7 @@ namespace KitchenCandy.GDOs.Caramel_Apple
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            (Locale.English, CreateUnlockInfo("Caramel Apple", "Adds Caramel Apple as a main", ""))
+            (Locale.English, CreateUnlockInfo("Caramel Apple", "Adds Caramel Apple as a dessert", ""))
         };
 
         public override int Difficulty => 1;

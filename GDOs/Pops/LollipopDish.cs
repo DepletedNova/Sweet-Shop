@@ -59,7 +59,7 @@ namespace KitchenCandy.GDOs.Pops
         };
         public override List<(Locale, UnlockInfo)> InfoList => new()
         {
-            (Locale.English, CreateUnlockInfo("Lollipops", "Adds lollipops as a main", "Pops!"))
+            (Locale.English, CreateUnlockInfo("Lollipops", "Adds lollipops as a dessert", "Pops!"))
         };
 
         public override int Difficulty => 3;
